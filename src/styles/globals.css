@@ -1,0 +1,62 @@
+/* ========================================
+   글로벌 스타일
+   ======================================== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-gray-900;
+}
+
+/* 헤더 및 네비게이션 스타일 */
+header {
+  @apply sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm;
+}
+
+/* 섹션 기본 스타일 */
+section {
+  @apply scroll-m-16;
+}
+
+/* CTA 버튼 애니메이션 */
+.btn-cta {
+  @apply px-6 py-3 bg-navy text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105;
+}
+
+.btn-cta:active {
+  @apply scale-95;
+}
+
+/* 입력 필드 스타일 */
+input,
+textarea {
+  @apply px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-navy focus:ring-2 focus:ring-navy focus:ring-opacity-20 transition-all;
+}
+
+/* 스크롤 숨기기 */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* 반응형 그리드 */
+@media (max-width: 768px) {
+  section {
+    @apply px-4;
+  }
+}
