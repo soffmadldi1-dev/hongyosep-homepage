@@ -5,7 +5,7 @@
 // 폼에서 제출한 이메일과 이름을 Supabase에 저장합니다.
 
 import { NextRequest, NextResponse } from 'next/server'
-import { supabaseClient, supabaseAdmin } from '@/lib/supabase'
+import { supabaseAdmin } from '@/lib/supabase'
 import { validateEmail, errorResponse, successResponse } from '@/lib/utils'
 
 export async function POST(req: NextRequest) {
