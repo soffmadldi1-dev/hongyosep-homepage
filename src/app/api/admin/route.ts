@@ -57,7 +57,7 @@ export async function GET(req: NextRequest) {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { password, format } = body
+    const { password } = body
 
     // 1. 관리자 인증
     if (!password || !verifyAdminPassword(password)) {
